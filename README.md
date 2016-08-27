@@ -17,7 +17,7 @@ I write my blogpost and other random stuffs on this website. You can use this as
 
 
 ## That's all folks! 
- - any issue/questions? --> [Github Issues}(https://github.com/ajnarayan/ajnarayan.github.io/issues). 
+ - any issue/questions? --> [Github Issues](https://github.com/ajnarayan/ajnarayan.github.io/issues). 
  - Feel free to suggest any updates. 
  - Finally, Thank you ! 
 
