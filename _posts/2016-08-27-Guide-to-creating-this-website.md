@@ -37,4 +37,4 @@ Useful Resources:
 
 [Jekyll Themes](http://jekyllthemes.org/)
 
-[Bootstrap] (http://getbootstrap.com/)
+[Bootstrap](http://getbootstrap.com/)
