@@ -15,8 +15,6 @@ author:
 
 
 links:
-  - name:         About
-    url:          /about
   - name:         Blog
     url:          /blog
     external:     true
