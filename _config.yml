@@ -1,7 +1,7 @@
 title:            Anjjan Narayan
 description:      My Portfolio Website.
-#url:              https://ajnarayan.github.io
-url:              https://localhost:4000
+url:              https://ajnarayan.github.io
+#url:              https://localhost:4000
 signoff:          Anjjan Narayan
 disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
