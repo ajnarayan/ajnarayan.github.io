@@ -18,9 +18,6 @@ links:
   - name:         GitHub
     url:          http://github.com/ajnarayan
     external:     true
-highlighter:      pygments
+highlighter:      rouge
 permalink:        pretty
-markdown:         redcarpet
-redcarpet:
-  extensions:
-    - smart
+markdown:         kramdown
