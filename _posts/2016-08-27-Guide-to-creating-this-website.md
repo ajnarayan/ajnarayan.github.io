@@ -36,5 +36,3 @@ Useful Resources:
 [File Formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 
 [Jekyll Themes](http://jekyllthemes.org/)
-
-[Bootstrap](http://getbootstrap.com/)
