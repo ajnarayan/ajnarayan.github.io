@@ -14,11 +14,9 @@ The following are the things you need to do:
 
 2. Install Jekyll following the steps mentioned [here](https://jekyllrb.com/docs/quickstart/)
 
-3. For the current website, I have used Scribble theme. You can fork it from [here](https://github.com/muan/scribble/fork). 
+3. For the current website, I have used Scribble theme. You can fork it from [here](https://github.com/muan/scribble/fork)
 
-4. clone the repository onto your computer 
-
-` git clone https://github.com/username/scribble `
+4. clone the repository onto your computer `git clone https://github.com/username/scribble`
 
 5. cd into the folder and run `bundle execute`
 

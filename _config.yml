@@ -12,9 +12,10 @@ author:
   twitter : ajnarayan93
   github : ajnarayan
 links:
+  - name:         About
+    url:          /
   - name:         Blog
     url:          /blog
-    external:     true
   - name:         GitHub
     url:          http://github.com/ajnarayan
     external:     true
