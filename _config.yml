@@ -3,7 +3,7 @@ description:      My Portfolio Website.
 url:              https://ajnarayan.github.io
 # url:              http://localhost:4000/
 signoff:          Anjjan Narayan
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+disqus_shortname: anjjan
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: 'UA-83248357-1'
 
@@ -11,11 +11,13 @@ author:
   linkedin: narayananjjan
   twitter : ajnarayan93
   github : ajnarayan
+
 links:
   - name:         About
     url:          /
   - name:         Blog
     url:          /blog
+    comments:     true
   - name:         GitHub
     url:          http://github.com/ajnarayan
     external:     true
@@ -23,10 +25,12 @@ links:
 highlighter:      rouge
 permalink:        pretty
 markdown:         kramdown
+comments:         true
 
 # highlighter:      pygments
 # permalink:        pretty
 # markdown:         redcarpet
+# comments:         true
 # redcarpet:
 #   extensions:
 #     - smart
