@@ -35,7 +35,10 @@ analytics-google: 'UA-83248357-1'
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, set to false
-disqus: mydisqus
+disqus:
+  shortname: mydisqus # enter this from your disqus account
+  categories: [blog, project] # only show disqus for posts that have these categories
+
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
@@ -87,6 +90,9 @@ related: true
 # show next & prev links in blog post?
 blog-nav-links: true
 
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
 # show author block at the end of a post ?
 show-author: true
 
@@ -98,15 +104,8 @@ sass:
     style: :compressed
 
 gems:
-  - jemoji
-  - jekyll-mentions
   - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
   - jekyll-gist
-  - jekyll-paginate
 
 jekyll-mentions:
     base_url: https://github.com
-
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, indigo-gh-pages.zip, Rakefile, screen-shot.png, travis.sh, tasks]
