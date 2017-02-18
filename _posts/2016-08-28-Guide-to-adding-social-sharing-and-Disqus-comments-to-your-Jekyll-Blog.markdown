@@ -2,6 +2,15 @@
 layout: post
 title: Guide to adding social sharing and Disqus comments to your Jekyll Blog  
 date: 2016-08-28 10:30:31
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- markdown
+- components
+- extra
+blog: true
+author: anjjannarayan
+description: Guide to adding social and Disqus comments to your Jekyll Blog
 ---
 
 In my previous blog post I had writen a guide that enables you to create your own blog using Jekyll. In this blog post we will describe the necessary steps to append links to share your blog on Twitter, Facebook and Google+. 
