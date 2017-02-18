@@ -12,7 +12,7 @@ external-image: false
 picture: assets/images/profile.png
 
 #url: http://localhost:4000/
-url: https//ajnarayan.github.io
+url: http//ajnarayan.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
