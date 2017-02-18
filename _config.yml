@@ -1,6 +1,7 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: Anjjan Narayan
+bio: Declare variables, not War!
+
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -8,9 +9,10 @@ description: A blog about technology and stuff related
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/profile.png
 
-url: http://koppl.in/indigo
+#url: http://localhost:4000/
+url: https//ajnarayan.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -19,7 +21,7 @@ markdown: kramdown
 highlighter: rouge
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'UA-83248357-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
@@ -29,32 +31,26 @@ highlighter: rouge
 disqus: mydisqus
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+#facebook: myfacebook
+twitter: ajnarayan93
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
-youtube: myyoutube
-spotify: myspotify
-github: mygithub
-medium: medium
-vimeo: myvimeo
+linkedin: narayananjjan
+#youtube: myyoutube
+spotify: anjjan.narayan
+github: ajnarayan
+#medium: medium
+#vimeo: myvimeo
 email: myemail@gmail.com
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+    anjjannarayan:
+        name: Anjjan Narayan
+        bio: Declare variables, not War!
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
+        twitter: https://twitter.com/ajnarayan93
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -69,7 +65,7 @@ width: normal
 projects: true
 
 # if you don't need "about" or "blog", comment them out below
-about: false
+about: true
 blog: true
 
 # do you want to show the "read time" of the posts?
@@ -82,7 +78,7 @@ show-tags: true
 related: true
 
 # show next & prev links in blog post?
-blog-nav-links: false
+blog-nav-links: true
 
 # show author block at the end of a post ?
 show-author: true
@@ -93,6 +89,10 @@ animation: true
 sass:
     sass_dir: _sass
     style: :compressed
+
+links:
+  - name: About
+    url: /
 
 gems:
   - jemoji
