@@ -11,8 +11,15 @@ description: A blog about technology and stuff related
 external-image: false
 picture: assets/images/profile.png
 
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: true
+resume-external: true
+resume-url: https://google.com/?q=my+resume
+
 #url: http://localhost:4000/
-url: http//ajnarayan.github.io
+url: https://ajnarayan.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
