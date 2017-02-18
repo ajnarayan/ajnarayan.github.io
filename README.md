@@ -28,7 +28,7 @@ The theme was forked from [Here](https://github.com/sergiokopplin/indigo). The c
 ## Other Information
 - [Jekyll](https://jekyllrb.com/), [Gulp](http://gulpjs.com/), [BrowserSync](https://www.browsersync.io/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
 - Tests with [Travis](https://travis-ci.org/)
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F)
+- Google Speed: [96/100](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fajnarayan.github.io)
 - No JS. :sunglasses:
 - Article: How to Install Jekyll - by [Arti Annaswamy](https://github.com/aannasw). [Part 1](http://artiannaswamy.com/build-a-github-blog-part-1) and [Part 2](http://artiannaswamy.com/build-a-github-blog-part-2)
 - [Emojis in the projects list?](https://github.com/sergiokopplin/indigo/issues/72)
