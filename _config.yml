@@ -90,10 +90,6 @@ sass:
     sass_dir: _sass
     style: :compressed
 
-links:
-  - name: About
-    url: /
-
 gems:
   - jemoji
   - jekyll-mentions
