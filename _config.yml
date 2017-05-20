@@ -2,20 +2,37 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+nav:
+  Home: /
+  About: /about/
+  Writing: /archives/
+  Projects: https://github.com/ajnarayan
+
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: Hi! I'm Anjjan
+subtitle: Declare variables, not war!
+description: Hi! I'm [Anjjan Narayan](/about) and welcome to my little, minimal corner on the Internet. I am currently a software Engineer where I spend my time building awesome things to help people connect with their car.
+bio: Declare variables, not War!
+author: Anjjan 
+language: 
+timezone: America/New_York
+
+#For Blogs:
+customize:
+show_all_posts: false
+post_count: 5
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://ajnarayan.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+
+# Plugins
+plugins:
+    disqus_shortname: ajnarayan-github-io # Disqus Comments Shortname
+    google_analytics: UA-83248357-1 # enter the tracking ID for your Google Analytics
 
 # Directory
 source_dir: source
@@ -41,7 +58,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: false
 
 # Category & Tag
 default_category: uncategorized
@@ -52,7 +69,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD-MMM-YYYY
 time_format: HH:mm:ss
 
 # Pagination
@@ -69,3 +86,5 @@ theme: cactus-dark
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+exclude:
+  - .DS_Store
