@@ -79,7 +79,12 @@ theme: cactus-dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:ajnarayan/ajnarayan.github.io.git
+  branch: master
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 exclude:
   - .DS_Store
