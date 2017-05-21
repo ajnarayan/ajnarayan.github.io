@@ -4,3 +4,12 @@ _import/
 .DS_Store
 Gemfile.lock
 .jekyll-metadata
+.deploy-git
+about
+archives
+css
+images
+js
+lib
+scaffolds
+
