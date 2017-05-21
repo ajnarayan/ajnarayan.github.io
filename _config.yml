@@ -29,11 +29,6 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
-# Plugins
-plugins:
-    disqus_shortname: ajnarayan-github-io # Disqus Comments Shortname
-    google_analytics: UA-83248357-1 # enter the tracking ID for your Google Analytics
-
 # Directory
 source_dir: source
 public_dir: public
