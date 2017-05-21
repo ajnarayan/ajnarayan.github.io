@@ -19,3 +19,4 @@ My idea of an ideal website:
 * Keep it simple so that everyone should be able to access the contents with little effort
 * Mainly, get your point across 
 
+The credit for this minimal theme goes to [Cactus-dark](https://github.com/probberechts/cactus-dark). 
