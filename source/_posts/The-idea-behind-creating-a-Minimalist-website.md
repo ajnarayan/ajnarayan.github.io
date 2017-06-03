@@ -2,6 +2,7 @@
 title: The idea behind creating a Minimalist website
 date: 2017-05-21 18:42:28
 tags:
+- Ideas
 ---
 
 > The less I needed, the better I felt. 

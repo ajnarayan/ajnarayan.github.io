@@ -1,7 +1,8 @@
 ---
 title: Guide for creating this website
 date: 2017-06-03 10:51:01
-tags:
+tags: 
+- Developer
 ---
 
 This website was created with one idea in mind - Minimalism. My previous websites were designed using Jekyll and Hugo. I needed to switch to a new framework for two reasons: continue the learning and build things that can scale. I came across [Hexo](https://hexo.io/). Hexo is a blog framework that is built on Nodejs. The features of Hexo are: 
