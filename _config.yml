@@ -88,4 +88,3 @@ deploy:
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 exclude:
   - .DS_Store
-  - .deploy-git
