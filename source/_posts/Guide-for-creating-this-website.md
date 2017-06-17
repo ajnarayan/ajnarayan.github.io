@@ -1,5 +1,5 @@
 ---
-title: Guide for creating this website
+title: Guide for creating website using Hexo and Github
 date: 2017-06-03 10:51:01
 tags: 
 - Developer
