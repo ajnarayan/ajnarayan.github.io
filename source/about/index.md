@@ -16,7 +16,7 @@ I love LINUX! During my free time I boot up my old laptop with different linux o
 
 This website was based on my experiments with creating new systems and help me improve my writing. I am looking forward to writing about some of my life experiences, ideas, programming and anything that I think is worth putting up in my little corner of Internet. 
 
-You can Tweet to me at [@ajnarayan93](http://twitter.com/ajnarayan93). Here's the link to my [GitHub](http://github.com/ajnarayan) profile. 
+You can Tweet to me at [@brewinstallogic](http://twitter.com/brewinstallogic). Here's the link to my [GitHub](http://github.com/ajnarayan) profile. 
 
 If you find me and my work interesting and you want to talk to me about it, check out my [LinkedIn](http://www.linkedin.com/in/narayananjjan) profile.
 
