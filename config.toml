@@ -26,7 +26,6 @@ fa_icon = "fa-linkedin"
 url = "https://twitter.com/malkie16"
 fa_icon = "fa-twitter"
 
-
 [[params.social]]
 url = "/index.xml"
 fa_icon = "fa-rss"
