@@ -1,0 +1,21 @@
+{{ partial "header" . }}
+<body>
+  {{ partial "topnav" . }}
+  <section class="section">
+    <div class="container">
+      <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+  
+      <h1 class="title">{{ .Title }}</h1>
+      {{ if .Params.tags }}
+      {{ partial "tags" .Params.tags }}
+      {{ end }}
+      <br>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+<!--   {{partial "articleshare" .}} -->
+  {{ partial "disqus" . }}
+  {{ partial "footer" . }}
+</body>
