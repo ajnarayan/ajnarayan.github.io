@@ -7,25 +7,3 @@ keywords = ["Blog", "Tech"]
 [taxonomies]
 tag = "tags"
 category = "categories"
-
-[params]
-
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile"]
-
-[[params.social]]
-url = "https://github.com/beli3ver"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "https://gitlab.com/beli3ver"
-fa_icon = "fa-linkedin"
-
-[[params.social]]
-url = "https://twitter.com/malkie16"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"

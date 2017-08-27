@@ -1,18 +1,13 @@
 ---
-author: "Michael Henderson"
 date: 2014-09-28
-linktitle: Creating a New Theme
-menu:
-  main:
-    parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: Creating a New Theme
+linktitle: Creating a New Hugo Theme
+title: Creating a New Hugo Theme
 weight: 10
 tags: 
 - Developer
-- Test
+- Tech
 ---
+
 
 
 ## Introduction
