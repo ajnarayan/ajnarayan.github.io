@@ -5,8 +5,10 @@ echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 # Build the project.
 hugo
 
+cd public
+
 # Add changes to git.
-git add -A
+git add .
 
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
@@ -16,4 +18,5 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:ajnarayan/ajnarayan.github.io.git gh-pages
+cd ..
+#git subtree push --prefix=public git@github.com:ajnarayan/ajnarayan.github.io.git gh-pages
