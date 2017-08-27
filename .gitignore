@@ -1,10 +1,2 @@
-_site/
-.sass-cache/
-_import/
 .DS_Store
-Gemfile.lock
-.jekyll-metadata
-.deploy-git
-images
-scaffolds
 public
