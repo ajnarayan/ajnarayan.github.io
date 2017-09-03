@@ -6,32 +6,17 @@
 <p>Hi! I'm <a href="/about">Anjjan Narayan</a> and welcome to my little, minimal corner on the Internet. I am currently a Software Engineer and I spend my time building awesome things to help people connect with their car.</p>
 </div>
 
-
-<!-- 
-<ul>
-            {{ range first 3 .Data.Pages }}
-            <li>
-              <p> {{ .Date.Format "January 2, 2006" }} </p>
-            </li>
-
-            <li>
-              <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
-              <p class="desc">{{ .Description }}</p>
-            </li>
-            {{ end }}
-          </ul>
-          <a class="button" href="/articles">All Posts</a> -->
-
  <div class="row">
-        <div class="six columns recent">
+        <div class="eleven columns recent">
           <h3>Blog Posts</h3>
+
           <table class="u-full-width">
 
             {{ range first 3 .Data.Pages }}
             <tbody>
               <td> <p> {{ .Date.Format "January 2, 2006" }} </p> </td>
-
               <td> <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a> </td>
+              <!-- <td>  <p> {{.ReadingTime}} minute read </p></td> -->
             </tbody>
             {{ end }}
           </table>
