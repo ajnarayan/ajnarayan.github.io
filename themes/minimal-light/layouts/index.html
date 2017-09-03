@@ -1,47 +1,32 @@
- {{ partial "header" . }}
 <body>
-  {{ partial "topnav" . }}
-<section class="section">
-    <div class="container">
-<!-- {{ template "theme/_default/list.html" . }} -->
-<div class="columns is-mobile">
- <img src="/img/logo.png" alt="logo" height="150" width="150" data-action="zoom" align="margin-left" />
-<p style="font-size:130%;margin-left:20px; margin-top: 20px">Hi! I'm <a href="/about">Anjjan Narayan</a> and welcome to my little, minimal corner on the Internet. I am currently a Software Engineer and I spend my time building awesome things to help people connect with their car.</p>
-</div>
-
-
-
-
-</section>
-
-<div class="container">
- <h1 class="title">Blog Posts</h1>
- <div class="table">
- <ul>
-            {{ range first 3 .Data.Pages.ByDate.Reverse }}
-            <li>
-             <div style="width:200px; float:left;display:inline-block;">
-              <a class="subtitle is-6">{{ .Date.Format "January 2, 2006" }} </a>
-             </div>
-            </li>
-            <li>  
-             <div style="width:500px; margin-left:10px; display:inline-block;">
-              	<a class="title is-6" style="font-size:110%;" href="{{ .RelPermalink }}"> {{ .Title }}  </a>
-             </div>            
-             </li>
-            <!-- {{ if .Params.tags }}{{ partial "tags" .Params.tags }} {{ end}} -->
-           <!--  <li>
-            <div style="width:200px;  margin-left:500px; float: right; display:inline;">
-              <p class="subtitle is-6"> {{.ReadingTime}} minute read </p>
-           </div>
-          </li> -->
-          <br>
-            
-            {{ end }}
-  </ul>
+  
+<div class = "container">
+  <form>
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Your email</label>
+      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+    </div>
+    <div class="six columns">
+      <label for="exampleRecipientInput">Reason for contacting</label>
+      <select class="u-full-width" id="exampleRecipientInput">
+        <option value="Option 1">Questions</option>
+        <option value="Option 2">Admiration</option>
+        <option value="Option 3">Can I get your number?</option>
+      </select>
+    </div>
   </div>
-	<a class="button" href="/articles">All Posts</a>	
+  <label for="exampleMessage">Message</label>
+  <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+  <label class="example-send-yourself-copy">
+    <input type="checkbox">
+    <span class="label-body">Send a copy to yourself</span>
+  </label>
+  <input class="button-primary" type="submit" value="Submit">
+</form>
+
 </div>
-</div>
-  {{ partial "footer" . }}
+
+
+
 </body>
