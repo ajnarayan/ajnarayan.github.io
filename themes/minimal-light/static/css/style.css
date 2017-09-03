@@ -2205,6 +2205,8 @@ a.box:active {
 .table.is-striped tbody tr:nth-child(2n):hover {
     background-color: #eef2f7
 }
+
+
 .title,
 .subtitle {
     font-weight: 300;
@@ -4561,6 +4563,8 @@ a.nav-item.is-tab.is-active {
         justify-content: flex-end
     }
 }
+
+
 .nav {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4585,10 +4589,11 @@ a.nav-item.is-tab.is-active {
     width: 100%
 }
 .nav>.container>.nav-left>.nav-item:first-child:not(.is-tab) {
+    flex: 1 1 100%;
     padding-left: 0
 }
 .nav>.container>.nav-right>.nav-item:last-child:not(.is-tab) {
-    padding-right: 20px
+    padding-right: 20px;
 }
 .container>.nav>.nav-left>.nav-item:first-child:not(.is-tab) {
     padding-left: 0
@@ -5814,6 +5819,7 @@ html {
 }
 .nav .level-item {
     margin-left: 30px
+
 }
 nav .level {
     padding-top: 14px;
@@ -5971,3 +5977,5 @@ article+article {
   width : 50px;
    display: block;
   margin-left:10px; }
+
+

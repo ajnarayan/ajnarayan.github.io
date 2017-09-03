@@ -5,7 +5,7 @@
 <meta content="{{ delimit .Keywords ", " }}" name="keywords">
 <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
 
-<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }} | Anjjan Narayan</title>
+<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 
 <link href='https://fonts.googleapis.com/css?family=Raleway:400|Source+Serif+Pro:400,300,600' rel='stylesheet' type='text/css'>
 

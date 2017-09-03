@@ -1,37 +1,41 @@
 <section class="section">
   <div class="container">
     <nav class="nav">
+    <div class ="container">
       <div class="nav-left">
         <a class="nav-item" href="{{ .Site.BaseURL }}/"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
       </div>
+      </div>
+      <div class = "container">
       <div class="nav-right">
-        <nav class="nav-item level is-mobile">     
-            <a class="level-item" style= "padding-right : 20px;" href="/about" title="About Me">
+        <nav class="nav-item ">     
+            <a class="level-item" style= "padding-right : 0px;" href="/about" title="About Me">
                 <span class="icon">
                 <i class=" fa fa-user"></i>
                 </span>
             </a>
-            <a class="level-item" style= "padding-right : 20px;" href="/articles" title="Articles">
+            <a class="level-item" style= "padding-right : 0px;" href="/articles" title="Articles">
               <span class="icon">
               <i class=" fa fa-newspaper-o"></i>
               </span>
             </a>
-            <a class="level-item" style= "padding-right : 20px;" href="/projects" title="Projects">
+            <a class="level-item" style= "padding-right : 0px;" href="/projects" title="Projects">
               <span class="icon">
               <i class=" fa fa-github"></i>
               </span>
             </a>
-            <a class="level-item" style= "padding-right : 20px;" href="/bookmark" title="Quotes">
+            <a class="level-item" style= "padding-right : 0px;" href="/bookmark" title="Quotes">
               <span class="icon">
               <i class="fa fa-bookmark"></i>
               </span>
               </a>  
-              <a class="level-item" style= "padding-right : 20px;" href="{{.RSSLink}}", title="RSS">
+              <a class="level-item" style= "padding-right : 0px;" href="{{.RSSLink}}", title="RSS">
             <span class="icon">
                 <i class="fa fa-rss"></i>
             </span>
             </a>
         </nav>
+      </div>
       </div>
     </nav>
   </div>
