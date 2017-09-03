@@ -1,7 +1,4 @@
-baseURL = "https://ajnarayan.github.io"
+baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Anjjan Narayan"
-keywords = ["Blog", "Tech"]
-[taxonomies]
-tag = "tags"
-category = "categories"
+title = "My New Hugo Site"
+theme = "minimal-light"
