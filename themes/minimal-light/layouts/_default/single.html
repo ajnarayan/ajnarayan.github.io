@@ -1,0 +1,41 @@
+{{ partial "header" . }}
+<body>
+  {{ partial "topbar" . }}
+<div class="container">
+    <div class="row">
+    		
+    		<h1 class="post-title">
+    			 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    		</h1>
+    		
+    		<div class="post-content-meta">
+
+    		{{ if not .Params.nodate }}
+              <i class="icon-calendar"></i>  
+              <span class="post-date">
+                <span class="post-date-month">{{ .Date.Format "January" }}</span> 
+                <span class="post-date-day"> {{ .Date.Format "2" }}, </span>
+                <span class="post-date-year">{{ .Date.Format "2006" }}</span>
+              </span> 
+            {{ end }}
+
+            {{ $Site := .Site }}
+            {{ if .Params.tags }}
+                <span class="post-tag"> in </span>
+                {{ range .Params.tags }}
+                <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}tags/{{ . | urlize }}">
+                  <i class="icon-tag"></i>{{ . }}</a>
+                {{ end }}
+            {{ end }}
+          </div>
+
+		<div class="post-content">
+        {{ .Content }}
+      </div>
+
+    </div>
+
+ </div>
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
+ </body>
