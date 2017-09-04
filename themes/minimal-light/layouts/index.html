@@ -1,47 +1,31 @@
- {{ partial "header" . }}
+{{ partial "header.html" . }}
 <body>
-  {{ partial "topnav" . }}
-<section class="section">
-    <div class="container">
-<!-- {{ template "theme/_default/list.html" . }} -->
-<div class="columns is-mobile">
- <img src="/img/logo.png" alt="logo" height="150" width="150" data-action="zoom" align="margin-left" />
-<p style="font-size:130%;margin-left:20px; margin-top: 20px">Hi! I'm <a href="/about">Anjjan Narayan</a> and welcome to my little, minimal corner on the Internet. I am currently a Software Engineer and I spend my time building awesome things to help people connect with their car.</p>
+  {{ partial "topbar.html" . }}
+<div class = "container">
+<div class="intro">
+<figure> <img src="/images/logo.png" alt="Logo" height="150" width="150" data-action="zoom" align="margin-left" /> </figure>
+<p>Hi! I'm <a href="/about">Anjjan Narayan</a> and welcome to my little, minimal corner on the Internet. I am currently a Software Engineer and I spend my time building awesome things to help people connect with their car.</p>
 </div>
 
+ <div class="row">
+        <div class="eleven columns recent">
+          <h3>Blog Posts</h3>
 
+          <table class="u-full-width">
 
-
-</section>
-
-<div class="container">
- <h1 class="title">Blog Posts</h1>
- <div class="table">
- <ul>
-            {{ range first 3 .Data.Pages.ByDate.Reverse }}
-            <li>
-             <div style="width:200px; float:left;display:inline-block;">
-              <a class="subtitle is-6">{{ .Date.Format "January 2, 2006" }} </a>
-             </div>
-            </li>
-            <li>  
-             <div style="width:500px; margin-left:10px; display:inline-block;">
-              	<a class="title is-6" style="font-size:110%;" href="{{ .RelPermalink }}"> {{ .Title }}  </a>
-             </div>            
-             </li>
-            <!-- {{ if .Params.tags }}{{ partial "tags" .Params.tags }} {{ end}} -->
-           <!--  <li>
-            <div style="width:200px;  margin-left:500px; float: right; display:inline;">
-              <p class="subtitle is-6"> {{.ReadingTime}} minute read </p>
-           </div>
-          </li> -->
-          <br>
-            
+            {{ range first 3 .Data.Pages }}
+            <tbody>
+              <td> <p> {{ .Date.Format "January 2, 2006" }} </p> </td>
+              <td> <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a> </td>
+              <!-- <td>  <p> {{.ReadingTime}} minute read </p></td> -->
+            </tbody>
             {{ end }}
-  </ul>
-  </div>
-	<a class="button" href="/articles">All Posts</a>	
+          </table>
+
+            <a class="button" href="/articles">All Posts</a>  
+        </div>
 </div>
+
 </div>
-  {{ partial "footer" . }}
+{{ partial "footer.html" . }}
 </body>

@@ -1,3 +1,7 @@
-# Hemingway2
+# Minimal light
 
-The theme for the blog is originally from [Hemingway2](https://github.com/beli3ver/hemingway2.git). Hemingway2 is licensed under the [MIT License](LICENSE.md). The original Author of the theme is [Malte Kiefer](https://github.com/beli3ver). 
+This is a custom theme build on [skeleton](https://getskeleton.com)
+
+This is heavily inspired from [this theme](https://github.com/prakhar1989/hugo-blog/tree/master/themes/skeleton)
+
+Due credit to https://github.com/prakhar1989

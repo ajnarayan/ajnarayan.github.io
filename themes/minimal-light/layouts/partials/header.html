@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="{{ delimit .Keywords ", " }}" name="keywords">
-<meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
+<html lang="en-us">
+<head>
+  <title>
+    {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }} | Anjjan Narayan
+  </title>
 
-<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 
-<link href='https://fonts.googleapis.com/css?family=Raleway:400|Source+Serif+Pro:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
-<!-- Icon -->
-<link rel="icon" sizes="16x16" href="/touch-icon.png">
-<link rel="shortcut icon" href="/touch-icon.png">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}styles.min.css">
+  <!--  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css">
+  <link rel="stylesheet"  href="{{ .Site.BaseURL }}css/skeleton.css"> -->
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png"> -->
+  <link rel="shortcut icon" href="images/favicon.png">
 
-<!-- styles -->
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-{{ with .Site.Params.highlight.style }}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css">
-{{ else }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" integrity="sha256-Zd1icfZ72UBmsId/mUcagrmN7IN5Qkrvh75ICHIQVTk=" crossorigin="anonymous" />
-{{ end }}
+
+
+  {{ if .Site.Params.categoriescss }}
+    <link rel="stylesheet" type="text/css" href="{{ .Site.Params.categoriescss }}">
+  {{ end }}
+</head>

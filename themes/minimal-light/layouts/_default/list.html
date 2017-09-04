@@ -1,31 +1,46 @@
-  {{ partial "header" . }}
+{{ partial "header.html" . }}
 <body>
-   {{ partial "topnav" . }}
-  <section class="section">
-    <div class="container">
-      {{ range sort .Paginator.Pages }}
-      <article>
-        <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }} , {{ .ReadingTime}} minute read.</h2>
-        <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
-        {{ if .Params.tags }}
-        {{ partial "tags" .Params.tags }}
-        {{ end }}
-        
-        <div class="content">
-          {{ .Summary | plainify | safeHTML }}
-          {{ if .Truncated }}
-          ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
-            Read more
-            <span class="icon is-small">
-              <i class="fa fa-angle-double-right"></i>
-            </span>
-          </a>
+	  {{ partial "topbar.html" . }}
+	<div class = "container">
+	<h1 class="post-title" > <a href="#">Writing</a> </h1>
+	 <p></p>
+	
+	{{ range sort .Data.Pages }}
+
+	<div class="row">
+        <div class="post-title eight columns">
+          <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+          <div class="post-tag">
+          {{ $Site := .Site }}
+            {{ if .Params.tags }}
+              {{ range .Params.tags }}
+              <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}tags/{{ . | urlize }}">
+                  <i class="icon-tag"></i> {{ . }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        <div class="post-meta four columns">
+          {{ if not .Params.nodate }}
+          <span class="post-date listing-date">
+            <span class="post-date-month">{{ .Date.Format "January" }}</span> 
+            <span class="post-date-day"> {{ .Date.Format "2" }}, </span>
+            <span class="post-date-year">{{ .Date.Format "2006" }}</span>
+          </span> 
           {{ end }}
         </div>
-      </article>
+
+        <div class = "post-content thirteen columns">
+
+        	{{ .Summary | plainify | safeHTML }}
+        	{{ if .Truncated }}
+        	. . . <a href="{{ .Permalink }}" style="height:28px"> Read More </a>
+        	{{ end }}
+        </div>
+
+      </div>
+	
       {{ end }}
-    </div>
-  </section>
-  {{ partial "pager" . }}
-  {{ partial "footer" . }}
+	</div>
+	{{ partial "footer" . }}
 </body>
