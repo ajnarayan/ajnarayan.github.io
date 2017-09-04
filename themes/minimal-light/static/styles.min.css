@@ -915,11 +915,25 @@ div.recent figure {
 }
 .intro figure {
     margin-bottom: 2em
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-right: 10px;
 }
 .intro figure img {
     border-radius: 4px;
-    max-width: none
+    max-width: none;
+    display: inline-block;
+    float: right;
 }
+
+.intro p{
+    margin-left: 20px; 
+    margin-top: 20px;
+    display: inline-block;
+    width: 550px;
+}
+
 a.publisher-anchor-color,
 div#disqus_thread a {
     color: #5a6e79
