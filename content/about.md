@@ -30,11 +30,11 @@ If you’d like to connect, feel free to get in touch or stalk me elsewhere on t
 ---
 
 # COLOPHON
-To write this website, I mainly used [Sublime Text](https://www.sublimetext.com/) for editing. The website is compiled using [Hexo](https://hexo.io/) - A static site generator framework written in Node.js. 
+To write this website, I mainly used [Sublime Text](https://www.sublimetext.com/) for editing. The website is compiled using [Hugo](https://gohugo.io/) - A static site generator framework written in Go. 
 
 This website is published on [Github](https://www.github.com) using Git. All the code for this website is freely [available](https://github.com/ajnarayan/ajnarayan.github.io).
 
-The theme for this website can be found [here](https://github.com/probberechts/cactus-dark).
+The Inspiration and credit for this theme - [github repo](https://github.com/prakhar1989/hugo-blog).
 
 
 <div class="image ">
