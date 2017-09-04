@@ -3,16 +3,15 @@
 
 name = "Minimal Light"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
 description = ""
 homepage = "http://siteforthistheme.com/"
 tags = []
-features = []
+features = ["blog"]
 min_version = "0.21"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Anjjan"
+  homepage = "https://ajnarayan.github.io"
 
 # If porting an existing theme
 [original]

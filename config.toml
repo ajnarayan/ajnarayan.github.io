@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ajnarayan.github.io/"
 languageCode = "en-us"
-title = "Anjjan Narayan"
-theme = "minimal-light"
+title = "brew install logic"
+theme= "minimal-light"
