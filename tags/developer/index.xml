@@ -21,5 +21,15 @@
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
+    <item>
+      <title>Introduction to GraphQL</title>
+      <link>https://ajnarayan.github.io/articles/introduction-to-graphql/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ajnarayan.github.io/articles/introduction-to-graphql/</guid>
+      <description>What is GraphQL As a developer, you will be used to having new technologies and frameworks being released every couple of months. There are three stages after encountering a new technology:
+ Stage 1 - Rejection - why should I use it when I already have  Stage 2 - Attraction - Maybe I should check what the buzz is about? Stage 3 - Dedication - Let&amp;rsquo;s go ahead and learn this and see how I can use it in my current scenario  Currently, I feel I am in stage 2 of this 3 stage process.</description>
+    </item>
+    
   </channel>
 </rss>
