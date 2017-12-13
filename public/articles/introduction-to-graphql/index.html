@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>
+    Introduction to GraphQL - brew install logic | Anjjan Narayan
+  </title>
+
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="https://ajnarayan.github.io/styles.min.css">
+  
+  
+  
+  <link rel="shortcut icon" href="images/favicon.png">
+
+
+
+
+  
+</head>
+<body>
+  <div class="post-header">
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <h4><a href="/">ANJJAN NARAYAN</a></h4>
+      </div>
+      <div class="six columns">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/about" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="/articles" title="Articles"><i class="icon-article-alt"></i></a></li>
+            <li><a href="/projects" title="Projects"><i class="icon-github-circled"></i></a></li>
+            <li><a href="/bookmark" title="Bookmark"><i class="icon-bookmark"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+    		
+    		<h1 class="post-title">
+    			 <a href="/articles/introduction-to-graphql/">Introduction to GraphQL</a>
+    		</h1>
+    		
+    		<div class="post-content-meta">
+
+    		
+              <i class="icon-calendar"></i>  
+              <span class="post-date">
+                <span class="post-date-month">December</span> 
+                <span class="post-date-day"> 10, </span>
+                <span class="post-date-year">2017</span>
+              </span> 
+            
+
+            
+            
+                <span class="post-tag"> in </span>
+                
+                <a class="post-tag post-tag-developer" href="https://ajnarayan.github.io/tags/developer">
+                  <i class="icon-tag"></i>Developer</a>
+                
+            
+          </div>
+
+		<div class="post-content">
+        
+
+<h3 id="what-is-graphql">What is GraphQL</h3>
+
+<p>As a developer, you will be used to having new technologies and frameworks being released every couple of months. There are three stages after encountering a new technology:</p>
+
+<ul>
+<li>Stage 1 - Rejection - why should I use it when I already have <Insert an awesome technology you are currently using></li>
+<li>Stage 2 - Attraction - Maybe I should check what the buzz is about?</li>
+<li>Stage 3 - Dedication - Let&rsquo;s go ahead and learn this and see how I can use it in my current scenario</li>
+</ul>
+
+<p>Currently, I feel I am in stage 2 of this 3 stage process. Having heard a lot about GraphQL from its time of inception, now is the perfect time to learn what GraphQL is and what&rsquo;s all the buzz about?</p>
+
+<p>On a high level, <a href="http://graphql.org/">GraphQL</a> basically is an interface that lets you decide what data you want. Based on this, it loads the data from the server and presents it to the client.</p>
+
+<p>If you are the kind of person who relies on old school definitions then here it goes;</p>
+
+<blockquote>
+<blockquote>
+<p>GraphQL is a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data.</p>
+</blockquote>
+</blockquote>
+
+<p>The gist of GraphQL is that it lets you (the client) specify the exact data that you need. To achieve this, GraphQL uses a type system to describe the data.</p>
+
+<h3 id="how-did-graphql-come-into-existance">How did GraphQL come into existance?</h3>
+
+<p>Facebook started GraphQL after they faced several limitations in REST APIs.</p>
+
+<p>Consider the following example;
+Let&rsquo;s take the example of an Instagram post. Say you have to display the instagram picture, number of likes and preview of comments along with the user who commented and the content of the comment. Ideally what you would do in a REST API world is that you would have an API that would return to you something like this:</p>
+
+<pre><code>{
+	{
+		post: catimage.jpeg
+		likescount : 100 
+		commentsection : [ {
+				name: 'LionelMessi'
+				content: 'Nice picture'
+			},
+			{
+				name: 'CR7'
+				content: 'Dude, you stole my cat!'
+			} 
+		]
+	},
+	{
+		post: dogimage.jpeg
+		likescount : 100 
+		commentsection : [ {
+				name: 'LionelMessi'
+				content: 'Not bad'
+			}
+		]
+
+	}
+}
+
+</code></pre>
+
+<p>Say you want to optimize this by having only the posts and likescount and not commentsection. I want the commentsection to be a link which on clicked should show the comments. The above JSON result above would be large in size as the number of comments keeps increasing. In this case you would need to add another endpoint which would only give you post and likescount. Now you have two endpoints, one giving only post and likescount and the other giving posts, likescounts and commentsection.</p>
+
+<p>You can see where we are heading to. As more and more requirements come, we would end up having multiple APIs which basically query the same backend but only display result in differnt manner.</p>
+
+<p>If we don&rsquo;t want to have multiple APIs, we can give the client the entire (above) JSON. The client would have to manipulate the JSON inorder to extract only the necessary details. There are many obvious drawback to this (Network latency with huge JSON payload, Redundant Client transformation Code, etc.).</p>
+
+<p>There can also be a situation that the commentsection details is coming from a Cassandra database whereas the likescount (which can increase from time to time) is coming from Redis or Memcache store.</p>
+
+<p>As the number of datastores increases and the number of APIs increases, it becomes hard to manage this. This one example of a limitation that REST APIs posses.</p>
+
+<h2 id="the-solution-to-this-problem">The Solution to this Problem:</h2>
+
+<p>Facebook came up with GraphQL to solve these drawbacks.</p>
+
+<p>Why not have a single &ldquo;smart&rdquo; endpoint that can handle multiple queries and transform the result so as to match only what the client requested?</p>
+
+<div class="image ">
+        <img class="image" src="/images/article_metadata/GraphQL_Request.png" align="center" alt="Alt Text">
+        <figcaption class="caption" align="center">GraphQL Request (Source graphql.org)</figcaption>
+ </div>
+
+<div class="image ">
+        <img class="image" src="/images/article_metadata/GraphQL_Response.png" align="center" alt="Alt Text">
+        <figcaption class="caption" align="center">GraphQL Response (Source graphql.org)</figcaption>
+ </div>
+
+<h3 id="rest-vs-graphql">REST vs GraphQL</h3>
+
+<p>Assume that we need to build an API that should return to us details about a football club. As per requirements, the UI needs to have a view where given a football club (Eg. Chelsea FC), I must get information of the club such as ClubName, YearofEstablishment, titles, and CurrentSeasonUpdate.</p>
+
+<p>This may sound straightforward, but we need to get data from multiple resources. These resources are club details, title details and season details.</p>
+
+<p>The JSON we need would look like this:</p>
+
+<pre><code>{
+	&quot;data&quot;: {
+		&quot;ClubName&quot;: &quot;Chelsea FC&quot;,
+		&quot;Manager&quot;: &quot;Antonio Conte&quot;,
+		&quot;YearOfEstablishment&quot;: &quot;1905&quot;,
+		&quot;CurrentSeasonUpdate&quot;: {
+			&quot;position&quot;: 3,
+			&quot;LastGameAgainst&quot;: &quot;Huddersfield&quot;,
+			&quot;Home/Away&quot;: &quot;A&quot;,
+			&quot;Result&quot;: &quot;1-3&quot;
+		},
+		&quot;Titles&quot;: [{
+				&quot;name&quot;: &quot;Premier League&quot;,
+				&quot;year&quot;: 2016
+			},
+			{
+				&quot;name&quot;: &quot;Champions League&quot;,
+				&quot;year&quot;: 2012
+			},
+			{
+				&quot;name&quot;: &quot;Europa League&quot;,
+				&quot;year&quot;: 2013
+			}
+		]
+	}
+}
+
+</code></pre>
+
+<p>If I needed this from a REST request, my requests would be something like this;</p>
+
+<pre><code>GET myservice:8080/GetClubDetails/{ClubName}
+</code></pre>
+
+<p>This would have given us details like this:</p>
+
+<pre><code>{
+		&quot;ClubName&quot;: &quot;Chelsea FC&quot;,
+		&quot;Manager&quot;: &quot;Antonio Conte&quot;,
+		&quot;YearOfEstablishment&quot;: &quot;1905&quot;,
+		&quot;CurrentSeasonId&quot;: 1056701,
+		&quot;ClubId&quot; : &quot;11111&quot;
+		&quot;TitleID&quot; : [1, 3, 6, 8] 
+		...
+}
+
+</code></pre>
+
+<p>In order to get the CurrentSeason stats (which may reside in another datasource like kafka), I would need to perform another GET call;</p>
+
+<pre><code>GET - myservice2:8080/SeasonStats/{seasonid}/{clubId}
+
+</code></pre>
+
+<p>and similarly,</p>
+
+<pre><code>GET - myservice3:8080/TitleDetails/1/{clubID}               ---&gt; 1 for details on only premier league victories
+GET - myservice3:8080/TitleDetails/3/{clubID}               ---&gt; 3 -or details on only Champions league victories
+</code></pre>
+
+<p>We can see the drawbacks slowly creeping in. In order to get the required JSON in my UI, I would need to have my API call 3 different services, combine these data and map it to my respective output.</p>
+
+<p>As we try to scale our service, we will eventually keep adding new endpoints and new code in the top layer to handle these multiple endpoint results.</p>
+
+<p>What GraphQL solves for us here is that it takes this custom endpoint idea and combines them. In other words, the GraphQL server will just be a single server with one endpoint.</p>
+
+<p>Here is how it would work. We would declaratively specify to the server what details we need in the form of a query. It is basically saying the graphQL server that <em>hey, I need to know my clubs name, manager, yearofEstablishment, SeasonStats and the titles</em>.</p>
+
+<pre><code>GET - /graphql?query={
+	clubName(id: 1111){
+		Manager,
+		YearOfEstablishment,
+		CurrentSeasonUpdate{
+			position,
+			LastGameAgainst,
+			Home/Away,
+			Result
+		},
+		Titles {
+			name, 
+			year
+		}
+	}
+}
+</code></pre>
+
+<p>GraphQL query is very similar to JSON without values. Take the response from JSON, remove the values and you have a graphQL query.</p>
+
+<p>From the Frontend UI persepective, all they need to do is query the graphQL server with what they need and it is exactly what they will get. No hastle, no multiple requests, no transformations etc.</p>
+
+<h3 id="the-conclusion">The Conclusion</h3>
+
+<p>A new technology is only useful when it solves a problem. There are many underlying GraphQL concepts that have not been mentioned here. These concepts will make you realize if GraphQL really solves your problem. I hope that this article will serve as a brief introduction to folks who want to know what all the fuss is about.</p>
+
+<p>P.S: As an ongoing experiment process to transforming into step 3 (Dedication) of understanding a new technology, I am currently working on a practical implementation of GraphQL. Refer <a href="https://github.com/ajnarayan/codehood">this</a> for more information.</p>
+
+      </div>
+
+    </div>
+
+ </div>
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'ajnarayan-github-io';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<div class="footer">
+<hr class="thin" />
+
+  <p><a href="/about">Designed</a> by Anjjan Narayan</p>
+</div>
+ </body>
