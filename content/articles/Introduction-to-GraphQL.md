@@ -197,4 +197,4 @@ From the Frontend UI persepective, all they need to do is query the graphQL serv
 A new technology is only useful when it solves a problem. There are many underlying GraphQL concepts that have not been mentioned here. These concepts will make you realize if GraphQL really solves your problem. I hope that this article will serve as a brief introduction to folks who want to know what all the fuss is about.
 
 
-P.S: As an ongoing experiment process to transforming into step 3 (Dedication) of understanding a new technology, I am currently working on a practical implementation of GraphQL. Refer [this](https://github.com/ajnarayan/codehood) for more information. 
+P.S: As an ongoing experiment process to transforming into step 3 (Dedication) of understanding a new technology, I am currently working on a practical implementation of GraphQL. Refer [this](https://github.com/ajnarayan/GraphQLTest) for more information. 
