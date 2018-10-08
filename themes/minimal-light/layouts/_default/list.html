@@ -31,13 +31,11 @@
         </div>
 
         <div class = "post-content thirteen columns">
-
         	{{ .Summary | plainify | safeHTML }}
         	{{ if .Truncated }}
         	. . . <a href="{{ .Permalink }}" style="height:28px"> Read More </a>
         	{{ end }}
         </div>
-
       </div>
 	
       {{ end }}
