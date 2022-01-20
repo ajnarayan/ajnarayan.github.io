@@ -29,6 +29,7 @@ weight = 3
   showProjectsList = false # show projects list by default (if projects data file exists).
   projectsUrl = "https://github.com/ajnarayan" # title link for projects list
 
+
  # Post page settings
   show_updated = true # default
   showReadTime = true # default
