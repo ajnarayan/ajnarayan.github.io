@@ -15,11 +15,6 @@ name = "Blog"
 url = "/articles"
 weight = 2
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-
 
 [params]
 
